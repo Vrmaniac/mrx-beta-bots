@@ -212,7 +212,8 @@ class MirrorListener:
                 msg += f'\n<b>Corrupted Files: </b>{typ}'
             msg += f'\n\n<b>Hey </b>{self.tag} <b>Your Job is Done</b>'
             msg += f'\n<b>It Tooks:</b> {get_readable_time(time() - self.message.date.timestamp())}'
-            msg += f'\n\n<b>Thanks For using @Z_Mirror</b>'
+            msg += f'\n\n<b>Thanks For using our service</b>'
+            msg += f'\n\n<b> Mr. X Mirror/Leech Zone™️</b>'
             if not files:
                 sendMessage(msg, self.bot, self.message)
             else:
@@ -232,7 +233,8 @@ class MirrorListener:
                 msg += f'\n<b>Files: </b>{files}'
             msg += f'\n\n<b>Hey </b>{self.tag} <b>Your Job is Done</b>'
             msg += f'\n<b>It Tooks:</b> {get_readable_time(time() - self.message.date.timestamp())}'
-            msg += f'\n\n<b>Thanks For using @Z_Mirror</b>'
+            msg += f'\n\n<b>Thanks For using our service</b>'
+            msg += f'\n\n<b> Mr. X Mirror/Leech Zone™️</b>'
             buttons = ButtonMaker()
             link = short_url(link)
             buttons.buildbutton("☁️ Drive Link", link)
@@ -349,7 +351,7 @@ def _mirror(bot, message, isZip=False, extract=False, isQbit=False, isLeech=Fals
             botstart = f"http://t.me/{b_uname}"
             buttons.buildbutton("Click Here to Start Me", f"{botstart}")
             startwarn = f"Dear {uname},\n\n<b>I found that you haven't started me in PM (Private Chat) yet.</b>\n\n" \
-                        f"From now on i will give link and leeched files in PM and log channel only"
+                        f"From now on, I will give link and leeched files in PM and log channel only"
             message = sendMarkup(startwarn, bot, message, InlineKeyboardMarkup(buttons.build_menu(2)))
         return
     mesg = message.text.split('\n')
