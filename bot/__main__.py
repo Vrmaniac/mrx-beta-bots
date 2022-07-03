@@ -68,13 +68,13 @@ def start(update, context):
     
     buttons.buildbutton("Owner", "https://t.me/SuperGodX")
     buttons.buildbutton("Channel", "https://t.me/+MnWuVAS45aI3N2Y1")
+    buttons.buildbutton("Group", "https://t.me/+HRCIHSg6X4AyMGVl")
     buttons.buildbutton("Ask Queries", "https://t.me/Zetrax_bot")
-    buttons.buildbutton("Owner", "https://t.me/dawn_in")
     
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-Hello Bro, Use our bot in Mr. X Mirror/Leech Zone
+Hello Bro, Use join our group Mr. X Mirror/Leech Zone to use this bot
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
